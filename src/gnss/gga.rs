@@ -125,7 +125,7 @@ pub(crate) fn handle(
 
     Ok(ParsedMessage::Gga(GgaData {
         source: nav_system,
-        timestamp: parse_hhmmss(split.get(1).unwrap_or(&""), now).ok(),
+        timestamp: parse_hhmmss_ss(split.get(1).unwrap_or(&""), now).ok(),
         latitude: parse_latitude_ddmm_mmm(
             split.get(2).unwrap_or(&""),
             split.get(3).unwrap_or(&""),
