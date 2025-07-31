@@ -71,6 +71,7 @@ pub(crate) fn handle(
             let s = split.get(2).unwrap_or(&"");
             match *s {
                 "A" => Some(true),
+                "D" => Some(true),
                 "V" => Some(false),
                 "" => None,
                 _ => {
